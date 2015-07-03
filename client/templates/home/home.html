@@ -6,6 +6,17 @@
 		<p>
 			<input type="file" id="csv-file">
 			<button id="load-csv">Load</button>
+			<button id="delete-all">Delete All</button>
 		</p>
+	</div>
+
+	<div class="well">
+		<ul>
+			{{#each logs}}
+				<li>
+					{{localDate}} - {{name}} - {{localStartTime}} ~ {{localEndTime}} - {{dailyRule}} - {{result}} - {{localWorkingTime}}
+				</li>
+			{{/each}}
+		</ul>
 	</div>
 </template>
